@@ -540,3 +540,13 @@ export function getRandomColor() {
 }
 
 export default botConfig;
+
+my-bot/
+├── bot.js
+├── package.json
+├── commands/
+│   ├── generate.js
+│   └── redeem.js
+├── data/
+│   └── codes.json
+└── ...
