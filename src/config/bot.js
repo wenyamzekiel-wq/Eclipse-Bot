@@ -59,15 +59,10 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "Why do you wanna be a raid hoster?", required: true },
-      { question: "Will you be active in the server?", required: true },
-      { question: "Have you already soloed a raid before?", required: true },
-      { question: "What is your maximum wave?", required: true },
-      { question: "How often can you host raids?", required: true },
-      { question: "Are you willing to follow all server rules and staff instructions?", required: true },
-      { question: "A raid only has 5 people after 10 minutes. What do you do?", required: true },
-      { question: "What will you do if someone joins the raid place?", required: true },
-     ],
+      { question: "What is your name?", required: true },
+      { question: "How old are you?", required: true },
+      { question: "Why do you want to join?", required: true },
+    ],
 
     // Embed colors by application status.
     statusColors: {
@@ -96,8 +91,8 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#FF0000",
-      secondary: "#9B59B6",
+      primary: "#336699",
+      secondary: "#2F3136",
 
       // Standard status colors for success/error/warning/info messages.
       success: "#57F287",
@@ -297,11 +292,17 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to raids!",
+    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
 
     // Text on the verification button.
     defaultButtonText: "Verify",
 
+    // Automatic verification behavior.
+    autoVerify: {
+      // How automatic verification decides who is auto-approved:
+      // - "none"        = everyone is auto-verified immediately
+      // - "account_age" = account must be older than set days
+      // - "server_size" = auto-verify everyone only in smaller servers
       defaultCriteria: "none",
 
       // Days used when `defaultCriteria` is `account_age`.
@@ -309,7 +310,7 @@ export const botConfig = {
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
-      serverSizeThreshold: 100,
+      serverSizeThreshold: 1000,
 
       // Allowed safety limits for account-age requirements.
       // 1 = minimum day, 365 = maximum days.
@@ -454,7 +455,6 @@ export const botConfig = {
     verification: true,
     reactionRoles: true,
     joinToCreate: true,
-    application: true,
 
     // Utility/quality-of-life modules.
     voice: true,
