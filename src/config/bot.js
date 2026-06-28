@@ -292,7 +292,7 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Click the button below to verify yourself and gain access to raids!",
 
     // Text on the verification button.
     defaultButtonText: "Verify",
@@ -310,7 +310,7 @@ export const botConfig = {
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
-      serverSizeThreshold: 1000,
+      serverSizeThreshold: 100,
 
       // Allowed safety limits for account-age requirements.
       // 1 = minimum day, 365 = maximum days.
@@ -540,13 +540,3 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-
-my-bot/
-├── bot.js
-├── package.json
-├── commands/
-│   ├── generate.js
-│   └── redeem.js
-├── data/
-│   └── codes.json
-└── ...
