@@ -43,7 +43,7 @@ export const botConfig = {
     defaultCooldown: 3,
 
     // If true, old commands are removed before re-registering.
-    deleteCommands: false,
+    deleteCommands: true,
 
     // Optional server ID used for testing slash commands quickly.
     testGuildId: process.env.TEST_GUILD_ID,
@@ -302,12 +302,6 @@ export const botConfig = {
     // Text on the verification button.
     defaultButtonText: "Verify",
 
-    // Automatic verification behavior.
-    autoVerify: {
-      // How automatic verification decides who is auto-approved:
-      // - "none"        = everyone is auto-verified immediately
-      // - "account_age" = account must be older than set days
-      // - "server_size" = auto-verify everyone only in smaller servers
       defaultCriteria: "none",
 
       // Days used when `defaultCriteria` is `account_age`.
