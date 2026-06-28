@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Server Bot",
+        name: "Eclipse Bot",
         // Activity type number (0 = Playing).
         type: 0,
       },
@@ -59,10 +59,15 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
-    ],
+      { question: "Why do you wanna be a raid hoster?", required: true },
+      { question: "Will you be active in the server?", required: true },
+      { question: "Have you already soloed a raid before?", required: true },
+      { question: "What is your maximum wave?", required: true },
+      { question: "How often can you host raids?", required: true },
+      { question: "Are you willing to follow all server rules and staff instructions?", required: true },
+      { question: "A raid only has 5 people after 10 minutes. What do you do?", required: true },
+      { question: "What will you do if someone joins the raid place?", required: true },
+     ],
 
     // Embed colors by application status.
     statusColors: {
