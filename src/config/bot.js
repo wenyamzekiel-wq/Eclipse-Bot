@@ -212,7 +212,7 @@ export const botConfig = {
     defaultCategory: null,
 
     // Role IDs allowed to manage/support tickets.
-    supportRoles: [],
+    supportRoles: [<@&1519332682147037345> <@&1519393446199034009> <@&1519393648503164928> <@&1519393192670134373> <@&1519392882795086045>],
 
     // Priority options users/staff can assign.
     priorities: {
@@ -439,21 +439,21 @@ export const botConfig = {
   features: {
     // Core systems.
     economy: true,
-    leveling: true,
+    leveling: false,
     moderation: true,
     logging: true,
-    welcome: true,
+    welcome: false,
 
     // Community engagement systems.
-    tickets: true,
-    giveaways: true,
-    birthday: true,
-    counter: true,
+    tickets: false,
+    giveaways: false,
+    birthday: false,
+    counter: false,
 
     // Security and self-service systems.
     verification: true,
-    reactionRoles: true,
-    joinToCreate: true,
+    reactionRoles: false,
+    joinToCreate: false,
     application: true,
 
     // Utility/quality-of-life modules.
@@ -462,7 +462,7 @@ export const botConfig = {
     tools: true,
     utility: true,
     community: true,
-    fun: true,
+    fun: false,
   },
 };
 
