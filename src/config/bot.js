@@ -43,7 +43,7 @@ export const botConfig = {
     defaultCooldown: 3,
 
     // If true, old commands are removed before re-registering.
-    deleteCommands: true,
+    deleteCommands: false,
 
     // Optional server ID used for testing slash commands quickly.
     testGuildId: process.env.TEST_GUILD_ID,
@@ -146,15 +146,15 @@ export const botConfig = {
       // Default footer text used in bot embeds.
       text: "Titan Bot",
       // Footer icon URL (null = no icon).
-      icon: not null,
+      icon: null,
     },
     // Default thumbnail URL for embeds (null = no thumbnail).
-    thumbnail: not null,
+    thumbnail: null,
     author: {
       // Optional default embed author block.
-      name: not null,
-      icon: not null,
-      url: not null,
+      name: null,
+      icon: null,
+      url: null,
     },
   },
 
