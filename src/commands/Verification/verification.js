@@ -163,16 +163,6 @@ async function handleSetup(interaction, guild, client) {
     const welcomeConfig = await getWelcomeConfig(client, guild.id);
     const hasAutoVerifyEnabled = Boolean(guildConfig.verification?.autoVerify?.enabled);
     const hasAutoRoleConfigured = Boolean(guildConfig.autoRole) || (Array.isArray(welcomeConfig.roleIds) && welcomeConfig.roleIds.length > 0);
-    
-            {
-                guildId: guild.id,
-                hasAutoVerifyEnabled,
-                hasAutoRoleConfigured,
-                expected: true,
-                suppressErrorLog: true
-            }
-        );
-    }
 
     await InteractionHelper.safeDefer(interaction);
 
