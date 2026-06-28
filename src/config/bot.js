@@ -439,21 +439,21 @@ export const botConfig = {
   features: {
     // Core systems.
     economy: true,
-    leveling: false,
+    leveling: true,
     moderation: true,
     logging: true,
-    welcome: false,
+    welcome: true,
 
     // Community engagement systems.
-    tickets: false,
-    giveaways: false,
-    birthday: false,
-    counter: false,
+    tickets: true,
+    giveaways: true,
+    birthday: true,
+    counter: true,
 
     // Security and self-service systems.
     verification: true,
-    reactionRoles: false,
-    joinToCreate: false,
+    reactionRoles: true,
+    joinToCreate: true,
     application: true,
 
     // Utility/quality-of-life modules.
@@ -462,7 +462,7 @@ export const botConfig = {
     tools: true,
     utility: true,
     community: true,
-    fun: false,
+    fun: true,
   },
 };
 
