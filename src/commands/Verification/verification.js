@@ -164,10 +164,25 @@ async function handleSetup(interaction, guild, client) {
     const hasAutoVerifyEnabled = Boolean(guildConfig.verification?.autoVerify?.enabled);
     const hasAutoRoleConfigured = Boolean(guildConfig.autoRole) || (Array.isArray(welcomeConfig.roleIds) && welcomeConfig.roleIds.length > 0);
 
+    if (hasAutoVerifyEnabled || hasAutoRoleConfigured) {
+        throw createError(
+            'Verification setup blocked by conflicting onboarding system',
+            ErrorTypes.CONFIGURATION,
+            'You cannot enable the verification system while **AutoVerify** or **AutoRole** is configured. Disable those first.',
+            {
+                guildId: guild.id,
+                hasAutoVerifyEnabled,
+                hasAutoRoleConfigured,
+                expected: true,
+                suppressErrorLog: true
+            }
+        );
+    }
+
     await InteractionHelper.safeDefer(interaction);
 
     const verifyEmbed = createEmbed({
-        title: "Raid Access Verification",
+        title: "Server Verification",
         description: message,
         color: getColor('success')
     });
